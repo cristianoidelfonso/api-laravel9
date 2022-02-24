@@ -22,7 +22,7 @@ class StudentFactory extends Factory
             'name' => $this->faker->firstName($gender = 'male'|'female'),
             'lastname' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
-            'birthdate' => date($format = 'Y-m-d', $endDate = '-15 years'),
+            'birthdate' => $this->faker->dateTimeBetween('-16 years', '+ 120 years'),
             'course' => $this->faker->sentence($nbWords = 5, $variableNbWords = true),
         ];
     }
