@@ -35,6 +35,9 @@ class StudentController extends Controller
     {
         $student = Student::create([
             "name"=>$request->input("name"),
+            "lastname"=>$request->input("lastname"),
+            "email"=>$request->input("email"),
+            "birthdate"=>$request->input("birthdate"),
             "course"=>$request->input("course")
         ]);
 
@@ -88,6 +91,9 @@ class StudentController extends Controller
     public function update(Request $request, Student $student)
     {
         $student->name = $request->input('name');
+        $student->lastname = $request->input('lastname');
+        $student->email = $request['email'];
+        $student->birthdate = $request['birthdate'];
         $student->course = $request['course'];
 
         $student->save();
