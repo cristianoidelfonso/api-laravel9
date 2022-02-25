@@ -1,5 +1,7 @@
 <?php
 
+// Referencia: https://www.codecheef.org/article/laravel-8-use-uuid-as-primary-key-example
+
 namespace App\Traits;
 
 use Illuminate\Support\Str;
